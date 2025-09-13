@@ -1,0 +1,12 @@
+<div>
+  <form class="createTodo" [formGroup]="createTodoForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Title" formControlName="title" />
+    <textarea
+      cols="40"
+      rows="10"
+      formControlName="description"
+      placeholder="Description..."
+    ></textarea>
+    <button>Create</button>
+  </form>
+</div>

@@ -1,0 +1,40 @@
+div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 10px;
+  border: 2px solid black;
+  .createTodo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 250px;
+    justify-content: space-between;
+    input {
+      padding: 10px 0;
+      width: 360px;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: transparent;
+    }
+    textarea {
+      background-color: transparent;
+      border-radius: 5px;
+      resize: vertical;
+      max-height: 150px;
+    }
+    button {
+      width: 100px;
+      border-radius: 5px;
+      border: 1px solid #b584c9a9;
+      background-color: transparent;
+      margin: 0px auto;
+      padding: 10px;
+      &:hover {
+        background-color: #b584c9a9;
+      }
+    }
+  }
+}
