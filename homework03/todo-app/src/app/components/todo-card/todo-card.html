@@ -1,0 +1,19 @@
+<div class="todoCard" [ngStyle]="{ 'border-color': getBorderColor() }">
+  <div class="firstLine">
+    <h3 [ngClass]="{ 'line': todo.status === status.Completed }">{{ todo.title }}</h3>
+    <div class="statusSelect">
+      <label for="status">Status:</label>
+      <select [ngModel]="todo.status" (ngModelChange)="onStatusChange($event)">
+        @for (status of todoStatus(); track status) {
+        <option [value]="status">{{ status }}</option>
+        }
+      </select>
+    </div>
+  </div>
+  <p class="card-details">{{ todo.description }}</p>
+  <div class="card-dates">
+    <p>Created: {{ todo.createdAt }}</p>
+    <p *ngIf="todo.updatedAt">Updated: {{ todo.updatedAt }}</p>
+  </div>
+  <button (click)="deleteTodo()">Delete</button>
+</div>

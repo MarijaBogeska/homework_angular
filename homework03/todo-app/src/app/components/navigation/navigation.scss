@@ -1,0 +1,40 @@
+header ul {
+  display: flex;
+  margin:40px 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  div:first-child{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 50px;
+    justify-content: space-between;
+  }
+}
+
+ul li {
+    font-weight: 700;
+
+  &.hover:hover {
+    cursor: pointer;;
+    color: #fdfdc9;
+    transform: scale(1.2);
+  }
+}
+
+ul li.searchBar {
+  &:hover {
+    transform: none;
+  }
+  
+}
+
+.nav{
+    display: flex;
+    height: 40px;
+    align-items: center;
+     justify-content: center;
+     gap: 60px;
+     background-color: #b584c9a9;
+}

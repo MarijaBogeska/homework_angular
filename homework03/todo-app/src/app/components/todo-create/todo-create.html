@@ -1,0 +1,33 @@
+<div>
+  <form class="createTodo" [formGroup]="createTodoForm" (ngSubmit)="onSubmit()">
+    
+    <input type="text" placeholder="Title" formControlName="title" />
+    @if(getErrorMessage('title')){
+    <span class="error">
+      {{ getErrorMessage("title") }}
+    </span>
+    }
+
+    <textarea
+      cols="40"
+      rows="10"
+      formControlName="description"
+      placeholder="Description..."
+    ></textarea>
+
+    @if(getErrorMessage('description')){
+    <span class="error">{{ getErrorMessage("description") }}</span>
+    }
+
+    <div class="statusSelect">
+      <label for="status">Status:</label>
+      <select formControlName="status">
+        @for (status of todoStatus(); track status) {
+        <option [value]="status">{{ status }}</option>
+        }
+      </select>
+    </div>
+
+    <button [disabled]="createTodoForm.invalid">Create</button>
+  </form>
+</div>
