@@ -1,0 +1,5 @@
+<section class="todoList">
+  @for(todo of filteredTodos() ;track todo.id){
+  <app-todo-card [todo]="todo" />
+  }
+</section>

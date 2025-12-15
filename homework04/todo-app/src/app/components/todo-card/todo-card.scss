@@ -1,0 +1,56 @@
+.todoCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border-width: 5px;
+  border-style: solid;
+  width: 400px;
+  padding: 30px;
+  margin: 0 auto;
+  &:hover {
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.308);
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  .line {
+    text-decoration: 2px line-through;
+  }
+  .firstLine {
+    display: flex;
+    justify-content: space-between;
+    .statusSelect {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      select {
+        padding: 10px;
+        border: 1px solid #b584c9a9;
+        border-radius: 5px;
+        background-color: transparent;
+        option {
+          background-color: #b584c9a2;
+          color: rgb(39, 37, 37);
+        }
+      }
+    }
+  }
+  .card-dates {
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #b584c9a9;
+    background-color: transparent;
+    margin: 10px auto;
+    padding: 10px;
+    &:hover {
+      background-color: #b584c9a9;
+    }
+  }
+  .btns{
+    display: flex;
+  }
+}
